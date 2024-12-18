@@ -3,9 +3,13 @@ import NavBar from "../components/NavBar.jsx"
 
 function HomePage() {
     return (
-        <div className="bg-sky-100  min-w-full min-h-[2000px]">
+        <div className="bg-white min-w-full min-h-[2000px]">
             {/* Navbar */}
             <NavBar />
+
+            <div className = "bg-sky-100 min-h-[500px]">
+                
+            </div>
 
            
             
