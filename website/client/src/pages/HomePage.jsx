@@ -3,7 +3,7 @@ import NavBar from "../components/NavBar.jsx"
 
 function HomePage() {
     return (
-        <div className="bg-sky-100 min-h-screen min-w-full">
+        <div className="bg-sky-100  min-w-full min-h-[2000px]">
             {/* Navbar */}
             <NavBar />
 

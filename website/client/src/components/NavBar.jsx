@@ -33,14 +33,12 @@ function NavBar() {
     // Call handleResize on mount to check the initial screen size
     handleResize();
 
-    
-
     // Cleanup the event listener on unmount
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return (
-    <div className="navbar bg-white fixed top-0 z-20 w-full">
+    <div className="navbar bg-white sticky top-0 z-20 w-full">
       <div className="flex p-5 w-full justify-between items-center">
         
         {/* Left Section: Logo and "Bruin Sportfishing" */}
