@@ -19,6 +19,9 @@ module.exports = {
           '100%': { transform: 'translateX(0)', opacity: '1' },
         },
       },
+      margin: {
+        '-180px': '-180px',
+      }
     },
   },
   plugins: [],
