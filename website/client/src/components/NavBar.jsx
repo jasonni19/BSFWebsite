@@ -2,7 +2,7 @@ import React from "react"
 import Logo1 from "../images/bsf.png"
 import { Link } from 'react-router-dom';
 
-import { useState, useEffect } from "react"; // Import useState for toggling the menu
+import { useState, useEffect, useLayoutEffect} from "react"; // Import useState for toggling the menu
 
 
 function NavBar() {
@@ -40,18 +40,19 @@ function NavBar() {
   }, []);
 
   // Prevent body scroll when menu is open
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (isMenuOpen) {
       // Disable scrolling
-      document.body.style.overflow = "hidden";
+      document.body.classList.add('no-scroll');
+      
     } else {
       // Enable scrolling again
-      document.body.style.overflow = "auto";
+      document.body.classList.remove('no-scroll');
     }
 
     // Cleanup on unmount
     return () => {
-      document.body.style.overflow = "auto";
+      document.body.classList.remove('no-scroll');
     };
   }, [isMenuOpen]);
 
@@ -90,7 +91,7 @@ function NavBar() {
         {/* All other buttons (stacked vertically on mobile view) */}
         <div
           className={`flex items-center space-x-6 mr-3 lg:flex lg:flex-row lg:space-x-8 ${isMenuOpen && isMobile
-              ? `z-10 flex flex-col justify-center items-center w-full absolute bg-white top-20 left-0 h-[calc(100vh-80px)] overflow-y-auto`
+              ? `z-50 flex flex-col justify-center items-center w-full absolute bg-white top-20 left-0 h-[calc(100vh-80px)] overflow-y-auto `
              
                 : "hidden lg:flex lg:flex-row"
             }`}
@@ -112,7 +113,7 @@ function NavBar() {
           </Link>
 
           <Link
-            className={`hover:bg-gray-100 rounded-lg p-2 mt-2 btn btn-ghost text-sky-500 font-semibold text-2xl tracking-wide ${isMenuOpen ? "mb-24 text-3xl" : ""
+            className={`hover:bg-gray-100 rounded-lg p-2 mt-2 btn btn-ghost text-sky-500 font-semibold text-2xl tracking-wide ${isMenuOpen ? "mb-24  text-3xl" : ""
               }`}
             to="/trips"
           >
@@ -122,10 +123,13 @@ function NavBar() {
           <Link
             className={`hover:bg-gray-100 rounded-lg p-2 mt-2 btn btn-ghost text-sky-500 font-semibold text-2xl tracking-wide ${isMenuOpen ? "mb-24 text-3xl" : ""
               }`}
-            to="/resources"
+            to="/support"
           >
-            Resources
+            Support Us
           </Link>
+
+          {/* Overlay when menu is open */}
+
         </div>
       </div>
     </div>
