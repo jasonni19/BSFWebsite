@@ -64,7 +64,7 @@ const HomePage = () => {
 
                             </div>
                             <div className="flex justify-center">
-                                <img src={socPicture} className=" h-52 w-52 mt-3 rounded-full" />
+                                <img src={socPicture} draggable = "false" className=" h-52 w-52 mt-3 rounded-full" />
                             </div>
                         </div>
 
@@ -82,7 +82,7 @@ const HomePage = () => {
                                     </h1>
                                 </span>
                                 <div className="flex flex-col sm:flex-row items-center">
-                                    <img src={Monica} loading="lazy" className="w-40 h-40 rounded-full sm:block" />
+                                    <img src={Monica} draggable = "false" loading="lazy" className="w-40 h-40 rounded-full sm:block" />
                                     <p className="w-full sm:ml-5 text-white">
                                         Get ready to cast your line on our exciting upcoming fishing trips!
                                         Whether you're an experienced fisher or just starting, our trips offer
@@ -98,10 +98,10 @@ const HomePage = () => {
                                     </h1>
                                 </span>
                                 <div className="flex flex-col sm:flex-row items-center">
-                                    <img src={teamPicture} loading="lazy" className="w-72 h-40 rounded-full sm:block" />
+                                    <img src={teamPicture} draggable = "false" loading="lazy" className="w-72 h-40 rounded-full sm:block" />
                                     <p className="w-full sm:ml-5  text-white">
                                         We’re here to make sure every trip is fun, chill, and full of awesome memories.
-                                        View more information about us <Link className="underline hover:text-cyan-100" to="/board">here</Link> !
+                                        View more information about us <Link className="underline hover:text-cyan-100" to="/who-we-are">here</Link> !
                                     </p>
                                 </div>
                             </div>
@@ -113,7 +113,7 @@ const HomePage = () => {
                                     </h1>
                                 </span>
                                 <div className="flex flex-col sm:flex-row items-center">
-                                    <img src={Support} loading="lazy" className="w-40 h-40 rounded-full sm:block" />
+                                    <img src={Support} draggable = "false" loading="lazy" className="w-40 h-40 rounded-full sm:block" />
                                     <p className="w-full sm:ml-5 text-white">
                                         Love what we’re doing at Bruin Sportfishing? Your support helps us plan awesome fishing trips, grow our community, and share the joy of fishing with more people.
                                         More information on supporting us <Link className="underline hover:text-cyan-100" to="/support">here</Link>!
@@ -128,9 +128,9 @@ const HomePage = () => {
                     <div className="flex flex-col mt-[-4px]">
 
                         <div className="flex">
-                            <img src={Coral1} draggable="false" className="w-64 ml-32 md:block hidden sm:block" />
+                            <img src={Coral1} loading="lazy" draggable="false" className="w-64 ml-32 md:block hidden sm:block" />
 
-                            <img src={Coral2} draggable="false" className="w-64 ml-auto mr-48 md:block hidden sm:block" />
+                            <img src={Coral2} loading="lazy" draggable="false" className="w-64 ml-auto mr-48 md:block hidden sm:block" />
                         </div>
 
                         <Footer />

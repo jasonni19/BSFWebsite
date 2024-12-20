@@ -19,7 +19,7 @@ const useSlideInOnVisible = () => {
           }
         });
       },
-      { threshold: 0.8 } // Trigger when 50% of the element is in view
+      { threshold: 0.85 } 
     );
 
     elements.forEach((element) => observer.observe(element));

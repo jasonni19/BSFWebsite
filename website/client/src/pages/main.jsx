@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './HomePage.jsx'
 import AboutPage from "./AboutPage.jsx";
+import BoardPage from "./BoardPage.jsx";
 
 import '../styles/App.css'
 
@@ -14,6 +15,7 @@ root.render(
           <Routes>
             <Route path="/" element={<HomePage/>} />
             <Route path="/about" element={<AboutPage/>} />
+            <Route path="/who-we-are" element={<BoardPage/>} />
 
           </Routes>
         </Router>

@@ -107,7 +107,7 @@ function NavBar() {
           <Link
             className={`hover:bg-gray-100 rounded-lg p-2 mt-2 btn btn-ghost text-sky-500 font-semibold text-2xl tracking-wide ${isMenuOpen ? "mb-24 text-3xl" : ""
               }`}
-            to="/board"
+            to="/who-we-are"
           >
             Who We Are
           </Link>
