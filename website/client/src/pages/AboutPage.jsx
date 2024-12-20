@@ -1,17 +1,9 @@
-import React from "react"
-import NavBar from "../components/NavBar"
-import Footer from "../components/Footer.jsx"
+import React from 'react'
+import Navbar from "../components/NavBar"
 
-const AboutPage = () => {
-    return (<div> <NavBar />
-        <div> 
-            <h1 className = "text-4xl font-bold"> What is Bruin Sportfishing?</h1>
-
-
-        </div>
-
-
-        <Footer /> </div>)
+function AboutPage() {
+    return( <div> <Navbar/> 
+    </div>)
 }
 
-export default AboutPage
+export default AboutPage;

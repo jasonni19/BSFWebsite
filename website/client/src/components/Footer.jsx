@@ -1,10 +1,11 @@
 import React from 'react'
 
 function Footer() {
-    return (
-        <div className="flex flex-col min-h-screen">
-        <p> hi</p>
-        <Footer />
+    return (<div>
+        <div className="bg-yellow-200 h-40 mt-auto flex items-center justify-center">
+
+            <p className="text-center font-semibold">© 2024 Bruin Sportfishing. All rights reserved.</p>
+        </div>
     </div>)
 }
 
