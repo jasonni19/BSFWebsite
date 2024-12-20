@@ -5,6 +5,12 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        sm: '640px',
+        md: '768px',
+        lg: '1024px',
+        xl: '1280px',
+      },
       animation: {
         'slide-in-left': 'slideInLeft 1s forwards',
         'slide-in-right': 'slideInRight 1s forwards',

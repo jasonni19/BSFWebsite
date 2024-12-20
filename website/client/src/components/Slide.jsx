@@ -15,12 +15,11 @@ const useSlideInOnVisible = () => {
             entry.target.classList.add('animate-slide-in-right');
             entry.target.classList.remove('opacity-0'); // Remove opacity when in view
           } else {
-            entry.target.classList.add('opacity-0'); // Hide again when out of view
-            entry.target.classList.remove('animate-slide-in-right'); // Remove animation
+            
           }
         });
       },
-      { threshold: 0.5 } // Trigger when 50% of the element is in view
+      { threshold: 0.8 } // Trigger when 50% of the element is in view
     );
 
     elements.forEach((element) => observer.observe(element));
