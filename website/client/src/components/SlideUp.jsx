@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
 
-const useSlideInOnVisible = () => {
+const useSlideUp = () => {
   useEffect(() => {
-    const elements = document.querySelectorAll('.element-to-animate');
+    const elements = document.querySelectorAll('.fade-in-up');
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -12,14 +12,14 @@ const useSlideInOnVisible = () => {
 
           if (entry.isIntersecting) {
             // Add the correct slide animation class
-            entry.target.classList.add('animate-slide-in-right');
-            entry.target.classList.remove('opacity-0'); // Remove opacity when in view
+            entry.target.classList.add('animate__fadeInUp');
+            entry.target.classList.remove('opacity-0');
           } else {
             
           }
         });
       },
-      { threshold: 0.90 } 
+      { threshold: 0.40 } 
     );
 
     elements.forEach((element) => observer.observe(element));
@@ -30,4 +30,4 @@ const useSlideInOnVisible = () => {
   }, []);
 };
 
-export default useSlideInOnVisible;
+export default useSlideUp;

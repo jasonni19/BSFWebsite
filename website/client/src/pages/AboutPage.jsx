@@ -11,7 +11,7 @@ function AboutPage() {
 
 
         <div className="flex flex-col justify-center items-center">
-            <h1 className="text-center mt-8 text-sky-600 text-5xl font-bold"> What is Bruin Sportfishing?</h1>
+            <h1 className="text-center mt-8 text-sky-600 text-5xl font-bold"> <span style={{ textShadow: "1px 1px 1px rgba(0, 0, 0, 0.5)" }}> What is Bruin Sportfishing? </span> </h1>
             <p className="font-semibold w-[50%] mt-4 text-center"> Bruin Sportfishing is a recreational fishing club at UCLA dedicated to building a community of students who share an interest in fishing and the outdoors. Our goal is to provide opportunities for members to learn about fishing techniques, engage in hands-on experiences, and foster camaraderie through group activities such as fishing trips and workshops. Whether you're an experienced fisher or completely new to fishing, Bruin Sportfishing welcomes everyone to explore and enjoy the sport together. </p>
         </div>
 
@@ -19,13 +19,13 @@ function AboutPage() {
         <br />
 
         <div className="flex flex-col justify-center items-center">
-            <h1 className="text-center mt-8 text-sky-600 text-5xl font-bold animate-bounce"> Join Today!</h1>
+            <h1 className="text-center mt-8 text-sky-600 text-5xl font-bold animate-bounce"> <span style={{ textShadow: "1px 1px 1px rgba(0, 0, 0, 0.5)" }}> Join Today! </span></h1>
             <p className="font-semibold w-[50%] mt-4 text-center"> Meetings every Friday at 6 PM in <p className="underline">Kaplan A40 </p> </p>
             <img src={Meeting} className="w-[40%] rounded-lg mt-4" />
         </div>
 
         <div className="flex flex-col justify-center items-center">
-            <h1 className=" mt-16 mb-8 text-sky-600 text-5xl font-bold"> Frequently Asked Questions </h1>
+            <h1 className=" mt-16 mb-8 text-sky-600 text-5xl font-bold"> <span style={{ textShadow: "1px 1px 1px rgba(0, 0, 0, 0.5)" }}> Frequently Asked Questions </span></h1>
 
             <div className="w-[80%]">
                 <p className="font-bold">Do I need to have prior fishing experience to join?</p>
