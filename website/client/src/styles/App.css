@@ -13,8 +13,9 @@
 
   html, body {
     margin: 0; /* Remove any default margin */
-    height: auto;
+    min-height:100vh;
     background-color: #7dd3fc;
+    
     
 
 }

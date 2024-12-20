@@ -3,9 +3,12 @@ import Navbar from "../components/NavBar"
 import Footer from "../components/Footer"
 
 import Meeting from "../images/meeting.jpg"
+import useSlide from "../components/Slide.jsx"
 
 function AboutPage() {
+    useSlide()
     return (<div> <Navbar />
+
 
         <div className="flex flex-col justify-center items-center">
             <h1 className="text-center mt-8 text-sky-600 text-5xl font-bold"> What is Bruin Sportfishing?</h1>
@@ -52,8 +55,6 @@ function AboutPage() {
             <Footer/>
 
         </div>
-
-
 
     </div>)
 }

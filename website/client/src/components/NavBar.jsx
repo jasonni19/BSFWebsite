@@ -1,6 +1,7 @@
 import React from "react"
 import Logo1 from "../images/bsf.png"
 import { Link } from 'react-router-dom';
+import 'animate.css';
 
 import { useState, useEffect, useLayoutEffect} from "react"; // Import useState for toggling the menu
 
@@ -57,7 +58,7 @@ function NavBar() {
   }, [isMenuOpen]);
 
   return (
-    <div className="bg-white top-0 z-20 w-full">
+    <div className="bg-white top-0 z-50 w-full">
       <div className="flex p-5 w-full justify-between items-center">
         {/* Left Section: Logo and "Bruin Sportfishing" */}
         <div className="flex items-center ml-8">
@@ -90,10 +91,10 @@ function NavBar() {
 
         {/* All other buttons (stacked vertically on mobile view) */}
         <div
-          className={`flex items-center space-x-6 mr-3 lg:flex lg:flex-row lg:space-x-8 ${isMenuOpen && isMobile
-              ? `z-50 flex flex-col justify-center items-center w-full absolute bg-white top-20 left-0 h-[calc(100vh-80px)] overflow-y-auto `
+          className={` flex items-center space-x-6 mr-3 lg:flex lg:flex-row lg:space-x-8 ${isMenuOpen && isMobile
+              ? `z-10 flex flex-col justify-center items-center animate__animated animate__bounceIn w-full absolute bg-white top-20 left-0 h-[100%] overflow-y-auto `
              
-                : "hidden lg:flex lg:flex-row"
+                : "hidden lg:flex lg:flex-row "
             }`}
         >
           <Link

@@ -18,6 +18,8 @@ import socPicture from "../images/slide1.jpg"
 import Coral1 from "../images/coral1.png"
 import Coral2 from "../images/coral2.png"
 
+import 'animate.css';
+
 
 const HomePage = () => {
     useSlide();
@@ -40,14 +42,14 @@ const HomePage = () => {
 
                     <img src={Island} loading="lazy" draggable="false" className="w-60 ml-auto hidden md:block hidden sm:block" />
                     <div className="flex">
-                        <img src={Bear} loading="lazy" draggable="false" className=" sm:-mt-44" />
-                        <img src={Fish2} loading="lazy" draggable="false" className="w-60 hidden md:block hidden sm:block" />
+                        <img src={Bear} loading="lazy" draggable="false" className="overflow-x-hidden sm:-mt-44" />
+                        <img src={Fish2} loading="lazy" draggable="false" className=" w-60 overflow-x-hidden hidden md:block hidden sm:block" />
 
                     </div>
 
                     <div className="flex justify-end items-end">
-                        <img src={Fish1} loading="lazy" draggable="false" className="w-60 ml-8 hidden md:block hidden sm:block" />
-                        <img src={Fish3} loading="lazy" draggable="false" className="w-60 mr-auto ml-32 md:block hidden sm:block" />
+                        <img src={Fish1} loading="lazy" draggable="false" className="  w-60 ml-8 overflow-x-hidden hidden md:block hidden sm:block" />
+                        <img src={Fish3} loading="lazy" draggable="false" className="  w-60 mr-auto overflow-x-hidden ml-32 md:block hidden sm:block" />
                         <div className="element-to-animate opacity-0 ml-5 mr-12 text-white" >
                             <span style={{ textShadow: "1px 1px 2px rgba(0, 0, 0, 0.5)" }}> <h1 className="text-5xl font-semibold hover:animate-pulse mb-3"> Stay Up to Date</h1> </span>
 
@@ -128,9 +130,9 @@ const HomePage = () => {
                     <div className="flex flex-col mt-[-4px]">
 
                         <div className="flex">
-                            <img src={Coral1} loading="lazy" draggable="false" className="w-64 ml-32 md:block hidden sm:block" />
+                            <img src={Coral1} loading="lazy" draggable="false" className="w-64 ml-[10%] md:block hidden sm:block" />
 
-                            <img src={Coral2} loading="lazy" draggable="false" className="w-64 ml-auto mr-48 md:block hidden sm:block" />
+                            <img src={Coral2} loading="lazy" draggable="false" className="w-64 ml-auto mr-[10%] md:block hidden sm:block" />
                         </div>
 
                         <Footer />

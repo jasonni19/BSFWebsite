@@ -19,7 +19,7 @@ const useSlideInOnVisible = () => {
           }
         });
       },
-      { threshold: 0.85 } 
+      { threshold: 0.9 } 
     );
 
     elements.forEach((element) => observer.observe(element));
