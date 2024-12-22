@@ -1,15 +1,14 @@
-import React from "react"
-import Logo1 from "../images/bsf.png"
-import { Link } from 'react-router-dom';
+import React from "react";
+import Logo1 from "../images/bsf.png";
+import { useLocation, NavLink } from "react-router-dom";  // Use NavLink instead of Link
 import 'animate.css';
-
-import { useState, useEffect, useLayoutEffect} from "react"; // Import useState for toggling the menu
-
+import { useState, useEffect, useLayoutEffect } from "react";
 
 function NavBar() {
+  const location = useLocation(); // Get current location object
+
   const [isMenuOpen, setIsMenuOpen] = useState(false); // State to track if menu is open
   const [isMobile, setIsMobile] = useState(false); // State to track screen size
-  
 
   // Toggle menu visibility
   const toggleMenu = () => {
@@ -18,10 +17,7 @@ function NavBar() {
 
   // Detect screen size change
   useEffect(() => {
-    // Function to update isMobile state based on screen width
     const handleResize = () => {
-      
-
       if (window.innerWidth >= 1024) {
         setIsMobile(false); // On large screens, assume desktop mode
         setIsMenuOpen(false); // Close the menu when transitioning to large screens
@@ -30,45 +26,37 @@ function NavBar() {
       }
     };
 
-    // Add resize event listener
     window.addEventListener("resize", handleResize);
-
-    // Call handleResize on mount to check the initial screen size
     handleResize();
 
-    // Cleanup the event listener on unmount
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   // Prevent body scroll when menu is open
   useLayoutEffect(() => {
     if (isMenuOpen) {
-      // Disable scrolling
       document.body.classList.add('no-scroll');
-      
     } else {
-      // Enable scrolling again
       document.body.classList.remove('no-scroll');
     }
 
-    // Cleanup on unmount
     return () => {
       document.body.classList.remove('no-scroll');
     };
   }, [isMenuOpen]);
 
   return (
-    <div className="bg-white top-0 z-50 w-full">
+    <div className="bg-white top-0 z-20 w-full">
       <div className="flex p-5 w-full justify-between items-center">
         {/* Left Section: Logo and "Bruin Sportfishing" */}
         <div className="flex items-center ml-8">
           <img className="w-16 pr-3" src={Logo1} draggable="false" />
-          <Link
+          <NavLink
             className="mt-2 btn btn-ghost text-sky-500 font-bold italic text-2xl tracking-wide"
             to="/"
           >
             Bruin Sportfishing
-          </Link>
+          </NavLink>
         </div>
 
         {/* Hamburger menu (visible only on small screens) */}
@@ -93,44 +81,42 @@ function NavBar() {
         <div
           className={` flex items-center space-x-6 mr-3 lg:flex lg:flex-row lg:space-x-8 ${isMenuOpen && isMobile
               ? `z-10 flex flex-col justify-center items-center animate__animated animate__bounceIn w-full absolute bg-white top-20 left-0 h-[100%] overflow-y-auto `
-             
-                : "hidden lg:flex lg:flex-row "
+              : "hidden lg:flex lg:flex-row "
             }`}
         >
-          <Link
-            className={`hover:bg-gray-100 rounded-lg ml-5 p-2 mt-2 btn btn-ghost text-sky-500 font-semibold text-2xl tracking-wide ${isMenuOpen ? "mb-24 text-3xl" : ""
-              }`}
+          {/* Use NavLink instead of Link */}
+          <NavLink
             to="/about"
+            className={`hover:bg-gray-100 rounded-lg ml-5 p-2 mt-2 btn btn-ghost text-sky-500 font-semibold text-2xl tracking-wide ${isMenuOpen ? "mb-24 text-3xl" : ""} ${location.pathname === '/about' ? "bg-sky-100 e" : ""}`}
+          
           >
             About Us
-          </Link>
+          </NavLink>
 
-          <Link
-            className={`hover:bg-gray-100 rounded-lg p-2 mt-2 btn btn-ghost text-sky-500 font-semibold text-2xl tracking-wide ${isMenuOpen ? "mb-24 text-3xl" : ""
-              }`}
+          <NavLink
             to="/who-we-are"
+            className={`hover:bg-gray-100 rounded-lg p-2 mt-2 btn btn-ghost text-sky-500 font-semibold text-2xl tracking-wide ${isMenuOpen ? "mb-24 text-3xl" : ""} ${location.pathname === '/who-we-are' ? "bg-sky-100 e" : ""}`}
+           
+            
           >
             Who We Are
-          </Link>
+          </NavLink>
 
-          <Link
-            className={`hover:bg-gray-100 rounded-lg p-2 mt-2 btn btn-ghost text-sky-500 font-semibold text-2xl tracking-wide ${isMenuOpen ? "mb-24  text-3xl" : ""
-              }`}
+          <NavLink
             to="/trips"
+            className={`hover:bg-gray-100 rounded-lg p-2 mt-2 btn btn-ghost text-sky-500 font-semibold text-2xl tracking-wide ${isMenuOpen ? "mb-24 text-3xl" : ""} ${location.pathname === '/trips' ? "bg-sky-100 e" : ""}`}
+            
           >
             Trips and Events
-          </Link>
+          </NavLink>
 
-          <Link
-            className={`hover:bg-gray-100 rounded-lg p-2 mt-2 btn btn-ghost text-sky-500 font-semibold text-2xl tracking-wide ${isMenuOpen ? "mb-24 text-3xl" : ""
-              }`}
-            to="/support"
+          <NavLink
+            to="/support-us"
+            className={`hover:bg-gray-100 rounded-lg p-2 mt-2 btn btn-ghost text-sky-500 font-semibold text-2xl tracking-wide ${isMenuOpen ? "mb-24 text-3xl" : ""} `}
+            activeClassName="text-blue-800"
           >
             Support Us
-          </Link>
-
-          {/* Overlay when menu is open */}
-
+          </NavLink>
         </div>
       </div>
     </div>
@@ -138,4 +124,3 @@ function NavBar() {
 }
 
 export default NavBar;
-

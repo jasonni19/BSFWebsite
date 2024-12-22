@@ -15,7 +15,10 @@
     margin: 0; /* Remove any default margin */
     min-height:100vh;
     background-color: #7dd3fc;
-    
+    height:100%;
+    overflow-x: hidden; 
     
 
 }
+
+

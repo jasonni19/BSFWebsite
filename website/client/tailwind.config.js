@@ -30,5 +30,15 @@ module.exports = {
       }
     },
   },
-  plugins: [],
+  plugins: [require('daisyui')],
+  daisyui: {
+    themes: [
+      {
+        mytheme: {
+          // Set primary text color to black globally
+          "text-base-content": "#000000", 
+        },
+      },
+    ],
+  }, // <-- Added missing closing bracket here
 }

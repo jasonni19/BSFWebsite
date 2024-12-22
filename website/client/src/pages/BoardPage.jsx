@@ -21,7 +21,7 @@ const Board = () => {
 
             <div> {/*Co-Presidents */}
                 <p className=" mt-8 text-center font-bold text-3xl">  Executive Board  </p>  
-                <div className="mt-12 grid lg:grid-cols-2 md: grid-cols-1 sm:grid-cols-1 gap-48 gap-y-8 animate__animated animate__fadeInUp animate-faster" alt="executive">
+                <div className="mt-12 grid lg:grid-cols-2 md: grid-cols-1 sm:grid-cols-1 gap-48 gap-y-8" alt="executive">
                     <PersonCard ImageUrl={Bridget} Name="Bridget Vause" Position="Co-president" />
                     <PersonCard ImageUrl={Sun} Name="Sun Ho-Hwang" Position="Co-president" />
                 </div>

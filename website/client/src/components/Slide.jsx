@@ -8,7 +8,7 @@ const useSlideInOnVisible = () => {
       (entries) => {
         entries.forEach((entry) => {
           // Determine the direction of the slide
-          const directionClass = entry.target.getAttribute('data-slide-direction') || 'right';
+          
 
           if (entry.isIntersecting) {
             // Add the correct slide animation class

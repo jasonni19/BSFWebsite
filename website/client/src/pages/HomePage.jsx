@@ -22,10 +22,9 @@ import 'animate.css';
 
 
 const HomePage = () => {
-    useSlide();
 
     return (
-        <div className="bg-sky-300 min-w-full min-h-[1900px]">
+        <div className="bg-sky-300 min-w-full">
             {/* Navbar */}
 
             <NavBar />
@@ -35,8 +34,8 @@ const HomePage = () => {
 
                 <div className="bg-sky-200 h-[450px]">
 
-                    <p className="sm:text-1xl lg:text-2xl text-sky-600 font-semibold mt-16 text-center w-full rounded-lg p-5">  <span className="text-4xl" style={{ textShadow: "1px 1px 2px rgba(0, 0, 0, 0.5)" }}>
-                        Welcome to Bruin Sportfishing!
+                    <p className="sm:text-1xl lg:text-2xl text-sky-600 font-semibold mt-16 text-center w-full rounded-lg p-5">  <span className="text-4xl font-bold" style={{ textShadow: "1px 1px 2px rgba(0, 0, 0, 0.5)" }}>
+                        Welcome to Bruin Sportfishing! 
                     </span> <br /> <br />
                         The premier fishing club at UCLA, Bruin Sportfishing offers a welcoming community for all Bruins with an interest in fishing. Membership is free for all UCLA students, staff, and faculty, and we encourage anglers of all experience levels—whether you're a seasoned pro or just getting started—to join us on our exciting fishing trips! </p>
 
@@ -50,7 +49,7 @@ const HomePage = () => {
                     <div className="flex justify-end items-end">
                         <img src={Fish1} loading="lazy" draggable="false" className="  w-60 ml-8 overflow-x-hidden hidden md:block hidden sm:block" />
                         <img src={Fish3} loading="lazy" draggable="false" className="  w-60 mr-auto overflow-x-hidden ml-32 md:block hidden sm:block" />
-                        <div className="element-to-animate opacity-0 ml-5 mr-12 text-white" >
+                        <div className=" ml-5 mr-12 text-white" >
                             <span style={{ textShadow: "1px 1px 2px rgba(0, 0, 0, 0.5)" }}> <h1 className="text-5xl font-semibold hover:animate-pulse mb-3"> Stay Up to Date</h1> </span>
 
                             <div>
@@ -77,7 +76,7 @@ const HomePage = () => {
 
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-4 overflow-x-hidden overflow-y-auto">
 
-                            <div className="opacity-0 element-to-animate">
+                            <div className="">
                                 <span style={{ textShadow: "1px 1px 2px rgba(0, 0, 0, 0.5)" }}>
                                     <h1 className="mb-3 lg:mt-12 text-5xl text-white font-semibold hover:animate-pulse">
                                         Upcoming and Past Trips
@@ -93,7 +92,7 @@ const HomePage = () => {
                                 </div>
                             </div>
 
-                            <div className="opacity-0 element-to-animate">
+                            <div className="">
                                 <span style={{ textShadow: "1px 1px 2px rgba(0, 0, 0, 0.5)" }}>
                                     <h1 className="mb-3 lg:mt-12 text-5xl text-white font-semibold hover:animate-pulse">
                                         Meet Our Team
@@ -108,7 +107,7 @@ const HomePage = () => {
                                 </div>
                             </div>
 
-                            <div className="opacity-0 element-to-animate">
+                            <div className="">
                                 <span style={{ textShadow: "1px 1px 2px rgba(0, 0, 0, 0.5)" }}>
                                     <h1 className="mb-3 lg:mt-12 text-5xl text-white font-semibold hover:animate-pulse">
                                         Support Us
