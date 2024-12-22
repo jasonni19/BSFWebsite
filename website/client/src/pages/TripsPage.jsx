@@ -15,11 +15,11 @@ const TripsPage = () => {
 
   return (<div>
     <Navbar />
-    <div className="element-to-animate opacity-0 flex flex-col justify-center items-center">
+    <div className=" flex flex-col justify-center items-center">
 
 
       <h1 className=" text-center mt-8 text-sky-600 text-3xl lg:text-5xl font-bold"> <span style={{ textShadow: "1px 1px 1px rgba(0, 0, 0, 0.5)" }}> Trips and Events </span> </h1>
-      <p className="  font-semibold text-1xl lg:text-2xl w-[50%] mt-4">
+      <p className="  font-semibold text-lg lg:text-2xl w-[50%] mt-4">
         The Bruin Sportfishing Club organizes weekend fishing trips throughout the academic year, where we explore various local and regional fishing spots. Our trips range from casual day excursions to thrilling overnight camping and fishing adventures. Whether you're a seasoned angler or a beginner, our outings are designed to ensure everyone has a great time, catches some fish, and learns new techniques!
 
         We provide all the necessary equipment, including rods, reels, and tackle, and we organize carpools from campus to make getting to the fishing spots easier for everyone. We strive to make these trips affordable, with many outings being low-cost or free for participants.
