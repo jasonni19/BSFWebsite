@@ -9,7 +9,7 @@ import Fish1 from "../images/fish1.png"
 import Fish2 from "../images/fish2.png"
 import Fish3 from "../images/fish3.png"
 import Monica from "../images/santaMonica.jpg"
-import useSlide from "../components/Slide.jsx"
+
 
 import Support from "../images/support.jpg"
 import teamPicture from "../images/team.jpg"
@@ -29,7 +29,7 @@ const HomePage = () => {
 
             <NavBar />
 
-            <div className="flex h-screen">
+            <div className="flex ">
 
 
                 <div className="relative bg-sky-200 h-[450px]">
@@ -117,7 +117,7 @@ const HomePage = () => {
                                     <img src={Support} draggable = "false" loading="lazy" className="w-40 h-40 mb-4 rounded-full sm:block" />
                                     <p className="w-full sm:ml-5 text-white">
                                         Love what we’re doing at Bruin Sportfishing? Your support helps us plan awesome fishing trips, grow our community, and share the joy of fishing with more people.
-                                        More information on supporting us <Link className="underline hover:text-cyan-100" to="/support">here</Link>!
+                                        More information on supporting us <Link className="underline hover:text-cyan-100" to="/support-us">here</Link>!
                                     </p>
                                 </div>
                             </div>

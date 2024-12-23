@@ -14,7 +14,7 @@ import Abril from "../images/people/abril.png"
 
 const Board = () => {
     
-    return (<div style={{ backgroundColor: 'rgb(245, 245, 245)' }}> <NavBar />
+    return (<div className="min-h-screen flex flex-col" style={{ backgroundColor: 'rgb(245, 245, 245)' }}> <NavBar />
 
         <div className="flex flex-col justify-center items-center">
             <h1 className="text-center mt-8 text-sky-600 text-5xl font-bold"> <span style={{ textShadow: "1px 1px 1px rgba(0, 0, 0, 0.5)" }}> Meet Our Board </span> </h1>

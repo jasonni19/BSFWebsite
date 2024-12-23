@@ -112,7 +112,7 @@ function NavBar() {
 
           <NavLink
             to="/support-us"
-            className={`hover:bg-gray-100 rounded-lg p-2 mt-2 btn btn-ghost text-sky-500 font-semibold text-2xl tracking-wide ${isMenuOpen ? "mb-24 text-3xl" : ""} `}
+            className={`hover:bg-gray-100 rounded-lg p-2 mt-2 btn btn-ghost text-sky-500 font-semibold text-2xl tracking-wide ${isMenuOpen ? "mb-24 text-3xl" : ""} ${location.pathname === '/support-us' ? "bg-sky-100 e" : ""}`}
             activeClassName="text-blue-800"
           >
             Support Us

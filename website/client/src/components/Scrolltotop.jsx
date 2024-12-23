@@ -1,12 +1,10 @@
-import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import React, { useEffect } from "react";
 
 const ScrollToTop = () => {
-  const location = useLocation();
-
   useEffect(() => {
-    window.scrollTo(0, 0); // Scroll to the top when the location changes
-  }, [location.pathname]);
+    // Scroll to the top of the page when the component mounts
+    window.scrollTo(0, 0);
+  }, []); // Empty dependency array means this runs only once, when the component first mounts
 
   return null;
 };
