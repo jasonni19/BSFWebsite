@@ -18,7 +18,7 @@ function NavBar() {
   // Detect screen size change
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth >= 1024) {
+      if (window.innerWidth >= 1028) {
         setIsMobile(false); // On large screens, assume desktop mode
         setIsMenuOpen(false); // Close the menu when transitioning to large screens
       } else {
@@ -52,7 +52,7 @@ function NavBar() {
         <div className="flex items-center ml-8">
           <img className="w-16 pr-3" src={Logo1} draggable="false" />
           <NavLink
-            className="mt-2 btn btn-ghost text-sky-500 font-bold italic text-2xl tracking-wide"
+            className="mt-2 btn btn-ghost text-sky-500 font-bold italic text-xl md:text-2xl lg:text-2xl  tracking-wide"
             to="/"
           >
             Bruin Sportfishing

@@ -8,7 +8,7 @@ module.exports = {
       screens: {
         sm: '640px',
         md: '768px',
-        lg: '1024px',
+        lg: '1028px',
         xl: '1280px',
       },
       animation: {
@@ -40,5 +40,5 @@ module.exports = {
         },
       },
     ],
-  }, // <-- Added missing closing bracket here
+  }, 
 }

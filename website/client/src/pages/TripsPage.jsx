@@ -4,6 +4,7 @@ import useSlide from "../components/Slide.jsx"
 import carouselSlide from "../components/slideCarousel.jsx"
 
 
+
 import Sun from "../images/people/sun.jpg"
 import slide1 from "../images/support.jpg"
 import slide2 from "../images/channel2.jpg"
@@ -15,11 +16,11 @@ const TripsPage = () => {
 
   return (<div>
     <Navbar />
+
     <div className=" flex flex-col justify-center items-center">
 
-
       <h1 className=" text-center mt-8 text-sky-600 text-3xl lg:text-5xl font-bold"> <span style={{ textShadow: "1px 1px 1px rgba(0, 0, 0, 0.5)" }}> Trips and Events </span> </h1>
-      <p className="  font-semibold text-lg lg:text-2xl w-[50%] mt-4">
+      <p className="  font-semibold text-lg lg:text-2xl w-[50%] mt-4 mb-8">
         The Bruin Sportfishing Club organizes weekend fishing trips throughout the academic year, where we explore various local and regional fishing spots. Our trips range from casual day excursions to thrilling overnight camping and fishing adventures. Whether you're a seasoned angler or a beginner, our outings are designed to ensure everyone has a great time, catches some fish, and learns new techniques!
 
         We provide all the necessary equipment, including rods, reels, and tackle, and we organize carpools from campus to make getting to the fishing spots easier for everyone. We strive to make these trips affordable, with many outings being low-cost or free for participants.
@@ -31,7 +32,7 @@ const TripsPage = () => {
       <h1 className="ml-[10%] mt-16 text-sky-600 text-4xl lg:text-5xl font-bold"> <span style={{ textShadow: "1px 1px 1px rgba(0, 0, 0, 0.5)" }}> Past Fishing Trips</span> </h1>
     </div>
 
-    <div className="flex grid lg:grid-cols-2 sm:grid-cols-1">
+    <div className="flex grid lg:grid-cols-2 sm:grid-cols-1" alt = "channel islands">
 
       <div>
         <h1 className="mt-8 ml-[10%] lg:ml-[25%] text-3xl font-semibold "> Channel Islands Deep Sea Fishing</h1>

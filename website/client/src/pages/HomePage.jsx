@@ -24,7 +24,7 @@ import 'animate.css';
 const HomePage = () => {
 
     return (
-        <div className="bg-sky-300 min-w-full">
+        <div className="custom-background bg-sky-300 min-w-full">
             {/* Navbar */}
 
             <NavBar />
@@ -32,14 +32,14 @@ const HomePage = () => {
             <div className="flex h-screen">
 
 
-                <div className="bg-sky-200 h-[450px]">
+                <div className="relative bg-sky-200 h-[450px]">
 
                     <p className="sm:text-1xl lg:text-2xl text-sky-600 font-semibold mt-16 text-center w-full rounded-lg p-5">  <span className="text-4xl font-bold" style={{ textShadow: "1px 1px 2px rgba(0, 0, 0, 0.5)" }}>
                         Welcome to Bruin Sportfishing! 
                     </span> <br /> <br />
                         The premier fishing club at UCLA, Bruin Sportfishing offers a welcoming community for all Bruins with an interest in fishing. Membership is free for all UCLA students, staff, and faculty, and we encourage anglers of all experience levels—whether you're a seasoned pro or just getting started—to join us on our exciting fishing trips! </p>
 
-                    <img src={Island} loading="lazy" draggable="false" className="w-60 ml-auto hidden md:block hidden sm:block" />
+                    <img src={Island} loading="lazy" draggable="false" className="w-60 ml-auto mt-[3%] overflow-x-hidden hidden md:block hidden sm:block" />
                     <div className="flex">
                         <img src={Bear} loading="lazy" draggable="false" className="overflow-x-hidden sm:-mt-44" />
                         <img src={Fish2} loading="lazy" draggable="false" className=" w-60 overflow-x-hidden hidden md:block hidden sm:block" />
@@ -99,7 +99,7 @@ const HomePage = () => {
                                     </h1>
                                 </span>
                                 <div className="flex flex-col sm:flex-row items-center">
-                                    <img src={teamPicture} draggable = "false" loading="lazy" className="w-72 h-40 rounded-full mb-4 sm:block" />
+                                    <img src={teamPicture} draggable = "false" loading="lazy" className="w-40 h-40 rounded-full flex-shrink-0 flex-grow-0 mb-4 sm:block" />
                                     <p className="w-full sm:ml-5  text-white">
                                         We’re here to make sure every trip is fun, chill, and full of awesome memories.
                                         View more information about us <Link className="underline hover:text-cyan-100" to="/who-we-are">here</Link> !

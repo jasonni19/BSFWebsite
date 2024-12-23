@@ -7,7 +7,7 @@ import useSlide from "../components/Slide.jsx"
 
 function AboutPage() {
     useSlide()
-    return (<div> <Navbar />
+    return (<div style={{ backgroundColor: 'rgb(245, 245, 245)' }}> <Navbar />
 
 
         <div className="element-to-animate opacity-0 flex flex-col justify-center items-center">
@@ -20,7 +20,7 @@ function AboutPage() {
 
         <div className="element-to-animate opacity-0 flex flex-col justify-center items-center">
             <h1 className="text-center mt-8 text-sky-600 text-5xl font-bold animate-bounce"> <span style={{ textShadow: "1px 1px 1px rgba(0, 0, 0, 0.5)" }}> Join Today! </span></h1>
-            <p className="font-semibold w-[50%] mt-4 text-center"> Meetings every Friday at 6 PM in <p className="underline">Kaplan A40 </p> </p>
+            <p className="font-semibold w-[50%] mt-4 text-center"> Meetings every Wednesday at 8 PM in <p className="underline">Kaplan A40 </p> </p>
             <img src={Meeting} draggable = "false" className="w-[40%] rounded-lg mt-4" />
         </div>
 
