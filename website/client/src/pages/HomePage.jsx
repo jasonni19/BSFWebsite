@@ -34,7 +34,7 @@ const HomePage = () => {
 
                 <div className="relative bg-sky-200 h-[450px]">
 
-                    <p className="sm:text-1xl lg:text-2xl text-sky-600 font-semibold mt-16 text-center w-full rounded-lg p-5">  <span className="text-4xl font-bold" style={{ textShadow: "1px 1px 2px rgba(0, 0, 0, 0.5)" }}>
+                    <p className="sm:text-1xl lg:text-2xl text-sky-600 font-semibold mt-16 text-center w-full rounded-lg p-5">  <span className="text-4xl lg:text-5xl font-bold" style={{ textShadow: "1px 1px 2px rgba(0, 0, 0, 0.5)" }}>
                         Welcome to Bruin Sportfishing! 
                     </span> <br /> <br />
                         The premier fishing club at UCLA, Bruin Sportfishing offers a welcoming community for all Bruins with an interest in fishing. Membership is free for all UCLA students, staff, and faculty, and we encourage anglers of all experience levels—whether you're a seasoned pro or just getting started—to join us on our exciting fishing trips! </p>

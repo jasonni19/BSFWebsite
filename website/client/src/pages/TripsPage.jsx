@@ -75,11 +75,11 @@ const TripsPage = () => {
       </div>
 
 
-      <div className="">
+      <div className="z-0">
 
-      <div className="z-0 ml-[2%] lg:ml-[20%] mockup-phone">
-            <div className="camera"></div>
-            <div className="display">
+      <div className="ml-[2%] lg:ml-[20%] mockup-phone">
+            <div className=" camera"></div>
+            <div className=" display">
               <div className="artboard artboard-demo phone-1 bg-blue-300">{channelSlides.map((slide, index) => (
                 <div
                   key={index}
