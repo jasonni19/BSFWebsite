@@ -1,5 +1,5 @@
 import React from "react";
-import Logo1 from "../images/bsf.png";
+import Logo1 from '../assets/bsf.png'; 
 import { useLocation, NavLink } from "react-router-dom";  // Use NavLink instead of Link
 import 'animate.css';
 import { useState, useEffect, useLayoutEffect } from "react";
