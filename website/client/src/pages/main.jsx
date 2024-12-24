@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from 'react-dom/client';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './HomePage.jsx';
 import AboutPage from "./AboutPage.jsx";
 import BoardPage from "./BoardPage.jsx";
