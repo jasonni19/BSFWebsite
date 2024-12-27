@@ -21,7 +21,7 @@ function AboutPage() {
         <div className="element-to-animate opacity-0 flex flex-col justify-center items-center">
             <h1 className="text-center mt-8 text-sky-600 text-5xl font-bold"> <span style={{ textShadow: "1px 1px 1px rgba(0, 0, 0, 0.5)" }}> Join Today! </span></h1>
             <p className="font-semibold w-[50%] mt-4 text-center"> Meetings every Wednesday at 8 PM in <p className="underline">Kaplan A40 </p> </p>
-            <img src={Meeting} draggable = "false" className="w-[40%] rounded-lg mt-4" />
+            <img src={Meeting} draggable = "false" className="w-[90%] lg:w-[80%] rounded-lg mt-4" />
         </div>
 
         <div className=" flex flex-col justify-center items-center">

@@ -53,7 +53,7 @@ const HomePage = () => {
                             <span style={{ textShadow: "1px 1px 2px rgba(0, 0, 0, 0.5)" }}> <h1 className="text-5xl font-semibold hover:animate-pulse mb-3"> Stay Up to Date</h1> </span>
 
                             <div>
-                                <p> Follow us on our Instagram, TikTok, and join our mailing list! <br /> You can also reach out with any questions or ideas for collaboration.</p>
+                                <p className = "font-medium"> Follow us on our Instagram, TikTok, and join our mailing list! <br /> You can also reach out with any questions or ideas for collaboration.</p>
 
 
                                 <a className="underline hover:text-cyan-100 mr-3" href="https://www.instagram.com/bruinsportfishing/">Instagram</a>
@@ -84,7 +84,7 @@ const HomePage = () => {
                                 </span>
                                 <div className="flex flex-col sm:flex-row items-center">
                                     <img src={Monica} draggable = "false" loading="lazy" className="w-40 mb-4 h-40 rounded-full sm:block" />
-                                    <p className="w-full sm:ml-5 text-white">
+                                    <p className="w-full sm:ml-5 text-white font-medium">
                                         Get ready to cast your line on our exciting upcoming fishing trips!
                                         Whether you're an experienced fisher or just starting, our trips offer
                                         something for everyone. Stay tuned for <Link className="underline hover:text-cyan-100" to="/trips">details</Link> and join us for our next trip!
@@ -100,7 +100,7 @@ const HomePage = () => {
                                 </span>
                                 <div className="flex flex-col sm:flex-row items-center">
                                     <img src={teamPicture} draggable = "false" loading="lazy" className="w-40 h-40 rounded-full flex-shrink-0 flex-grow-0 mb-4 sm:block" />
-                                    <p className="w-full sm:ml-5  text-white">
+                                    <p className="w-full sm:ml-5 font-medium text-white">
                                         We’re here to make sure every trip is fun, chill, and full of awesome memories.
                                         View more information about us <Link className="underline hover:text-cyan-100" to="/who-we-are">here</Link> !
                                     </p>
@@ -115,7 +115,7 @@ const HomePage = () => {
                                 </span>
                                 <div className="flex flex-col sm:flex-row items-center">
                                     <img src={Support} draggable = "false" loading="lazy" className="w-40 h-40 mb-4 rounded-full sm:block" />
-                                    <p className="w-full sm:ml-5 text-white">
+                                    <p className="w-full sm:ml-5 font-medium text-white">
                                         Love what we’re doing at Bruin Sportfishing? Your support helps us plan awesome fishing trips, grow our community, and share the joy of fishing with more people.
                                         More information on supporting us <Link className="underline hover:text-cyan-100" to="/support-us">here</Link>!
                                     </p>

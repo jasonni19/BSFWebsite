@@ -48,23 +48,23 @@ const TripsPage = () => {
       <p className="font-semibold text-white text-lg lg:text-2xl w-[50%] mt-4 mb-8 z-10">
         The Bruin Sportfishing Club organizes weekend fishing trips throughout the academic year. Our trips range from casual day excursions to thrilling overnight camping and fishing adventures.
         <br />  <br />
-        To join a trip, simply sign up ahead of time! Keep an eye on our <a className="underline hover:text-sky-600" href="https://www.instagram.com/bruinsportfishing/">social media</a> and emails for trip announcements and registration details. We can’t wait to have you reel in some fun with us!
+        To join a trip, simply sign up ahead of time! Keep an eye on our <a className="underline hover:text-sky-600" href="https://www.instagram.com/bruinsportfishing/">social media</a> and emails for trip announcements and registration details. We can't wait to have you join us!
       </p>
     </div>
 
     <div className="flex flex-col ">
-      <h1 className="ml-[10%] mt-16 text-sky-600 text-4xl lg:text-5xl font-bold"> <span style={{ textShadow: "1px 1px 1px rgba(0, 0, 0, 0.5)" }}> Past Fishing Trips</span> </h1>
+      <h1 className="ml-[10%] mt-16 text-sky-600 text-5xl lg:text-6xl font-bold"> <span style={{ textShadow: "1px 1px 1px rgba(0, 0, 0, 0.5)" }}> Past Fishing Trips</span> </h1>
     </div>
 
     <div className="flex grid lg:grid-cols-2 sm:grid-cols-1 mb-16" alt="channel islands">
 
       <div>
-        <h1 className="mt-8 ml-[10%] lg:ml-[25%] text-3xl font-semibold "> Channel Islands Deep Sea Fishing</h1>
-        <p className="ml-[10%]  lg:ml-[25%] mt-2 w-[80%] lg:w-[50%] "> Our annual Channel Islands fishing trip is a highly anticipated event where members set off on a half-day deep sea fishing trip near the stunning Channel Islands, located just off the coast of Oxnard, California. After a successful day of fishing, members have the opportunity to cook and feast on their fresh catch!</p>
+        <h1 className="mt-8 ml-[10%] lg:ml-[25%] text-4xl lg:text-5xl font-semibold "> Channel Islands Deep Sea Fishing</h1>
+        <p className="ml-[10%] text-2xl lg:text-3xl lg:ml-[25%] mt-2 w-[80%] lg:w-[70%] "> Our annual Channel Islands fishing trip is a highly anticipated event where members set off on a half-day deep sea fishing trip near the stunning Channel Islands, located just off the coast of Oxnard, California. After a successful day of fishing, members have the opportunity to cook and feast on their fresh catch!</p>
 
         <div className="mt-4 mb-4 ml-[10%] lg:ml-[25%]" >
-        <p className="lg:mt-8 sm:mt-[] text-3xl font-semibold"> Fishes We Caught:</p>
-        <ul className="mt-2">
+        <p className="lg:mt-8 sm:mt-[] text-4xl lg:text-5xl font-semibold"> Fishes We Caught:</p>
+        <ul className="mt-2 mb-8 text-xl">
           <li>- Rockfish</li>
           <li>- White Seabass</li>
           <li>- Mackerel</li>
@@ -98,7 +98,7 @@ const TripsPage = () => {
 
 
 
-    <div className="flex grid lg:grid-cols-2 sm:grid-cols-1 mb-16" alt="Santa Monica">
+    <div className="flex grid lg:grid-cols-2 sm:grid-cols-1 mb-16 " alt="Santa Monica">
 
 
       <div className="">
@@ -121,12 +121,12 @@ const TripsPage = () => {
       </div>
 
       <div>
-        <h1 className="mt-8 text-3xl ml-[10%] font-semibold "> Santa Monica Pier Fishing</h1>
-        <p className=" mt-2 w-[80%] ml-[10%] lg:w-[50%] "> Come join Bruin Sportfishing for a fun day at the Santa Monica Pier! Whether you're a seasoned angler or new to fishing, it’s a great chance to enjoy the ocean views and try your luck catching local fish. Meet up with fellow club members, relax, and make some great memories at one of LA’s most iconic spots.</p>
+        <h1 className="mt-4 ml-[10%] lg:ml-[0%] font-semibold text-4xl lg:text-5xl "> Santa Monica Pier Fishing</h1>
+        <p className=" mt-2 w-[80%] ml-[10%] lg:ml-[0%] lg:w-[70%] text-2xl lg:text-3xl "> Come join Bruin Sportfishing for a fun day at the Santa Monica Pier! Whether you're a seasoned angler or new to fishing, it’s a great chance to enjoy the ocean views and try your luck catching local fish. Meet up with fellow club members, relax, and make some great memories at one of LA’s most iconic spots.</p>
 
         <div className="mt-4 mb-4" >
-        <p className="lg:mt-8 ml-[10%] sm:mt-[] text-3xl font-semibold"> Fishes We Caught:</p>
-        <ul className="mt-2 ml-[10%]">
+        <p className="lg:mt-8 ml-[10%] lg:ml-[0%] sm:mt-[]  text-4xl lg:text-5xl font-semibold"> Fishes We Caught:</p>
+        <ul className="mt-2 ml-[10%] lg:ml-[0%] text-xl">
           <li>- Perch</li>
           <li>- Barred Sandbass</li>
           <li>- Mackerel</li>
