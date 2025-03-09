@@ -22,7 +22,7 @@ const SupportPage = () => {
                     As a student-run organization, funding is always a challenge for Bruin Sportfishing. From transportation and gear rentals for our fishing trips to providing bait, tackle, and educational materials for our meetings, most of our club’s expenses come directly from our members' pockets. Your support will allow us to make fishing trips, like deep-sea excursions and local outings, more accessible to all Bruins and help us expand fishing education without financial barriers!
                 </p>
 
-            <Link to="https://spark.ucla.edu/project/45037"
+            <Link to="https://giving.ucla.edu/campaign/donate.aspx?Fund=15581C&Code=M-47122&AutoFN=Y"
             className="element-to-animate opacity-0 text-sky-500 font-semibold text-4xl underline tracking-wide mb-8"> Donate here!</Link>
             </div>
             <Footer />

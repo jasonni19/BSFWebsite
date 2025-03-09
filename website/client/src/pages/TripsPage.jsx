@@ -52,6 +52,20 @@ const TripsPage = () => {
       </p>
     </div>
 
+
+    <div> 
+    <div className = "ml-[10%] mt-8 text-sky-600 text-5xl lg:text-6xl font-bold"> <span style={{ textShadow: "1px 1px 1px rgba(0, 0, 0, 0.5)" }}> Upcoming Fishing Trips</span> </div>
+    </div>
+
+    <div className = "flex">
+    <div className = "ml-[10%] text-4xl lg:text-5xl font-semibold mt-4 ">
+      <h1> Lake Kachuma Fishing/Camping Trip 🏕️ </h1>
+      <p className = "mt-4 text-2xl font-normal lg:text-3xl w-[60%]"> This trip will take place during week 2 of the spring quarter. It will be held at the Lake Cachuma Recreation Area in Santa Barbara County, California,  and is a two-day, two-night event. Our Lake Cachuma Camping/Fishing trip will offer expert guidance in fishing techniques for members such as precision casting and equipment optimization. Members will also learn sustainable angling practices, such as catch-and-release techniques, ensuring that fishing can contribute to the long-term health of our aquatic ecosystems. </p>
+    </div>
+
+  
+    </div>
+
     <div className="flex flex-col ">
       <h1 className="ml-[10%] mt-16 text-sky-600 text-5xl lg:text-6xl font-bold"> <span style={{ textShadow: "1px 1px 1px rgba(0, 0, 0, 0.5)" }}> Past Fishing Trips</span> </h1>
     </div>
