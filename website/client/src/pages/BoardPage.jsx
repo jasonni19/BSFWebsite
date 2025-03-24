@@ -56,7 +56,7 @@ const Board = () => {
             <div>
                 <p className="mt-8 text-center font-bold text-3xl"> Officers </p>
                 <div className="mt-12 grid lg:grid-cols-3 sm:grid-cols-2 lg:gap-x-16 md:gap-x-12 sm:gap-x-4 gap-y-12" alt="officers">
-                    <PersonCard ImageUrl={Jason} Name="Jason Ni" Position="Treasurer & Co-logistics Coordinator" />
+                    <PersonCard ImageUrl={Jason} Name="Jason Ni" Position="Treasurer & Web Master" />
                     <PersonCard ImageUrl={Riley} Name="Riley Weiss" Position="Social & Recruitment Co-chair" />
                     <PersonCard ImageUrl={Brandon} Name="Brandon Garfinkel" Position="Social & Recruitment Co-chair" />
                     <PersonCard ImageUrl={Lindy} Name="Lindy Nguyen" Position="Social Media Co-chair" />
