@@ -1,12 +1,38 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import Navbar from "../components/NavBar"
 import Footer from "../components/Footer"
 
 import Meeting from "../images/meeting.jpg"
 import useSlide from "../components/Slide.jsx"
 
+// Lazy load images
+const LazyImage = ({ src, alt, className }) => (
+    <img
+        src={src}
+        alt={alt}
+        className={className}
+        loading="lazy"
+        decoding="async"
+    />
+);
+
+// Preload critical images
+const preloadImages = () => {
+    const criticalImages = [Meeting]; // Preload the meeting image as it's the main image
+    criticalImages.forEach(src => {
+        const img = new Image();
+        img.src = src;
+    });
+};
+
 function AboutPage() {
     useSlide()
+
+    // Preload critical images when component mounts
+    React.useEffect(() => {
+        preloadImages();
+    }, []);
+
     return (<div style={{ backgroundColor: 'rgb(245, 245, 245)' }}> <Navbar />
 
 
@@ -21,7 +47,12 @@ function AboutPage() {
         <div className="element-to-animate opacity-0 flex flex-col justify-center items-center">
             <h1 className="text-center mt-8 text-sky-600 text-5xl font-bold"> <span style={{ textShadow: "1px 1px 1px rgba(0, 0, 0, 0.5)" }}> Join Today! </span></h1>
             <p className="font-semibold w-[50%] mt-4 text-center"> Meetings every Wednesday at 8 PM in <p className="underline">Kaplan A40 </p> </p>
-            <img src={Meeting} draggable = "false" className="w-[90%] lg:w-[50%] rounded-lg mt-4" />
+            <LazyImage
+                src={Meeting}
+                draggable="false"
+                className="w-[90%] lg:w-[50%] rounded-lg mt-4"
+                alt="Club Meeting"
+            />
         </div>
 
         <div className=" flex flex-col justify-center items-center">
@@ -34,7 +65,7 @@ function AboutPage() {
 
             <div className="element-to-animate opacity-0 w-[80%] mt-8">
                 <p className="font-bold">How do I sign up for a fishing trip?</p>
-                <p>To sign up for one of our fishing trips, simply attend a meeting, where we will announce trip details and registration instructions. You can also sign up online through our event pages, where you’ll find the necessary information for each trip, including location, date, and cost.</p>
+                <p>To sign up for one of our fishing trips, simply attend a meeting, where we will announce trip details and registration instructions. You can also sign up online through our event pages, where you'll find the necessary information for each trip, including location, date, and cost.</p>
             </div>
 
             <div className="element-to-animate opacity-0 w-[80%] mt-8">
@@ -52,7 +83,7 @@ function AboutPage() {
                 <p>We welcome members to get involved in leadership and event organization! If you are interested, you can express your interest during our meetings or contact our club officers. We are always looking for volunteers to help with event planning, logistics, and outreach. </p>
             </div>
 
-            <Footer/>
+            <Footer />
 
         </div>
 

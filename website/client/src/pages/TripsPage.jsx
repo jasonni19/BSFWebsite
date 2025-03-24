@@ -1,11 +1,8 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import Navbar from '../components/NavBar'
 import useSlide from "../components/Slide.jsx"
 import carouselSlide from "../components/slideCarousel.jsx"
-
 import Footer from "../components/Footer.jsx"
-
-
 
 import Sun from "../images/people/sun.jpg"
 import bgImage from "../images/support.jpg"
@@ -29,6 +26,26 @@ import s4 from "../images/santa/s4.jpg"
 import s5 from "../images/santa/s5.jpg"
 import lakeCachuma from "../images/lakeCachuma.jpg"
 
+// Lazy load images
+const LazyImage = ({ src, alt, className }) => (
+  <img
+    src={src}
+    alt={alt}
+    className={className}
+    loading="lazy"
+    decoding="async"
+  />
+);
+
+// Preload critical images
+const preloadImages = () => {
+  const criticalImages = [bgImage, lakeCachuma];
+  criticalImages.forEach(src => {
+    const img = new Image();
+    img.src = src;
+  });
+};
+
 const TripsPage = () => {
   useSlide()
   const channelSlides = [Sun, c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11];
@@ -36,12 +53,17 @@ const TripsPage = () => {
   const activeIndex = carouselSlide(channelSlides.length);
   const activeIndex2 = carouselSlide(monicaSlides.length)
 
+  // Preload critical images when component mounts
+  React.useEffect(() => {
+    preloadImages();
+  }, []);
+
   return (<div style={{ backgroundColor: 'rgb(245, 245, 245)' }}>
     <Navbar />
 
     <div className="z-0 relative flex flex-col justify-center items-center bg-cover bg-center" style={{ backgroundImage: `url(${bgImage}` }}>
       {/* Overlay with low opacity */}
-      <div className="absolute inset-0 bg-black opacity-70 z-0"></div> {/* You can adjust opacity as needed */}
+      <div className="absolute inset-0 bg-black opacity-70 z-0"></div>
 
       <h1 className="text-center mt-8 text-sky-600 text-3xl lg:text-5xl font-bold z-10">
         <span style={{ textShadow: "1px 1px 1px rgba(0, 0, 0, 0.5)" }}>Trips and Events</span>
@@ -52,7 +74,6 @@ const TripsPage = () => {
         To join a trip, simply sign up ahead of time! Keep an eye on our <a className="underline hover:text-sky-600" href="https://www.instagram.com/bruinsportfishing/">social media</a> and emails for trip announcements and registration details. We can't wait to have you join us!
       </p>
     </div>
-
 
     <div>
       <div className="ml-[10%] mt-8 text-sky-600 text-5xl lg:text-6xl font-bold"> <span style={{ textShadow: "1px 1px 1px rgba(0, 0, 0, 0.5)" }}> Upcoming Fishing Trips</span> </div>
@@ -71,7 +92,7 @@ const TripsPage = () => {
               <div className="absolute -top-2 -right-2 w-4 h-4 bg-blue-500 rounded-full shadow-lg"></div>
               <div className="absolute -bottom-2 -left-2 w-4 h-4 bg-yellow-500 rounded-full shadow-lg"></div>
               <div className="absolute -bottom-2 -right-2 w-4 h-4 bg-green-500 rounded-full shadow-lg"></div>
-              <img
+              <LazyImage
                 src={lakeCachuma}
                 alt="Lake Cachuma"
                 className="w-full h-[400px] object-cover rounded-lg shadow-xl border-4 border-white"
@@ -104,50 +125,44 @@ const TripsPage = () => {
         </div>
       </div>
 
-
       <div className="z-0">
-
         <div className="ml-[2%] lg:ml-[20%] mockup-phone">
-          <div className=" camera"></div>
-          <div className=" display">
-            <div className="artboard artboard-demo phone-1 bg-blue-300">{channelSlides.map((slide, index) => (
-              <div
-                key={index}
-                className={`carousel-item w-full ${index === activeIndex ? "block" : "hidden"
-                  }`}
-              >
-                <img src={slide} draggable="false" className="w-full h-screen object-contain" />
-              </div>
-            ))}</div>
+          <div className="camera"></div>
+          <div className="display">
+            <div className="artboard artboard-demo phone-1 bg-blue-300">
+              {channelSlides.map((slide, index) => (
+                <div
+                  key={index}
+                  className={`carousel-item w-full ${index === activeIndex ? "block" : "hidden"}`}
+                >
+                  <LazyImage src={slide} draggable="false" className="w-full h-screen object-contain" />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-
       </div>
 
     </div>
 
-
-
     <div className="flex grid lg:grid-cols-2 sm:grid-cols-1 mb-16 " alt="Santa Monica">
 
-
       <div className="">
-
         <div className="z-0 ml-[2%] lg:ml-[20%] mockup-phone">
           <div className="z-0 camera"></div>
           <div className="display">
-            <div className="artboard artboard-demo phone-1 bg-blue-300">{monicaSlides.map((slide, index) => (
-              <div
-                key={index}
-                className={`carousel-item w-full ${index === activeIndex2 ? "block" : "hidden"
-                  }`}
-              >
-                <img src={slide} draggable="false" className="w-full h-screen object-contain" />
-              </div>
-            ))}</div>
+            <div className="artboard artboard-demo phone-1 bg-blue-300">
+              {monicaSlides.map((slide, index) => (
+                <div
+                  key={index}
+                  className={`carousel-item w-full ${index === activeIndex2 ? "block" : "hidden"}`}
+                >
+                  <LazyImage src={slide} draggable="false" className="w-full h-screen object-contain" />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-
       </div>
 
       <div>
@@ -170,13 +185,6 @@ const TripsPage = () => {
 
     <Footer />
   </div>
-
-
-
-
-
-
-
   )
 }
 
