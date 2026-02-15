@@ -1,16 +1,13 @@
 import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import path from 'path'
 
-// https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()],
-  
-  build: {
-    assetsDir: 'assets', // This should place assets in the assets folder
-    rollupOptions: {
-      output: {
-        assetFileNames: 'assets/[name][extname]' // Ensure assets go into the assets folder
-      }
-    }
+  // This forces Vite to treat the folder containing this config file as the project root
+  root: process.cwd(), 
+  // This explicitly tells Vite where the public assets are
+  publicDir: 'public',
+  server: {
+    // This ensures Vite doesn't try to be too smart with redirects
+    strictPort: true,
   }
 })
